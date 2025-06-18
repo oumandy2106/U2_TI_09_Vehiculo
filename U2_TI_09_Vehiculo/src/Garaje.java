@@ -8,7 +8,7 @@ public class Garaje {
 
     public boolean estacionar(Vehiculo vehiculo){
         for (int i = 0; i< espacios.length; i++) {
-            if(espacios == null){
+            if(espacios[i] == null){
                 espacios[i] = vehiculo;
                 return true;
             }
@@ -16,9 +16,13 @@ public class Garaje {
         return false;
     }
 
-    public boolean estacionar(){
-        
+    public boolean retirar( String placa){
+        for (int i = 0; i< espacios.length; i++) {
+            if(espacios[i] !=null && espacios[i].getPlaca().equals(placa)){
+                espacios[i] = null;
+                return true;
+            }
+        }
+        return false;
     }
-
-
 }
