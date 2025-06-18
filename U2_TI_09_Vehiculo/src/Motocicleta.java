@@ -6,4 +6,11 @@ public class Motocicleta extends Vehiculo{
         this.tieneCaja = tieneCaja;
     }
 
+    public boolean isTieneCaja() {
+        return tieneCaja;
+    }
+
+    public void setTieneCaja(boolean tieneCaja) {
+        this.tieneCaja = tieneCaja;
+    }
 }
